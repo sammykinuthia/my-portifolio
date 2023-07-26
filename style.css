@@ -1,69 +1,269 @@
-:root{
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Josefin+Sans:wght@400;700&family=Kumbh+Sans:wght@400;700&family=Norican&family=Outfit:wght@400;700&family=Pacifico&family=Rubik:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Inter:wght@400;700;800&family=Josefin+Sans:wght@400;700&family=Kumbh+Sans:wght@400;700&family=Monoton&family=Norican&family=Outfit:wght@400;700&family=Pacifico&family=Rubik:wght@300;400;700&display=swap');
+
+:root {
     --text-primary: white;
-    --text-accent:rgb(255, 218, 11);
-    --bg-primary:black;
-    --bg-accent:rgb(255, 218, 11);
+    --text-accent: rgb(255, 218, 11);
+    --bg-primary: black;
+    --bg-accent: orange;
 
 }
-*, *::before, *::after{
+
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    width: 100vw;
-    min-height: 100vh;
-    background: var(--bg-primary);
-    color: var(--text-primary);
-   
+
+body {
+
+    font-family: 'Inter', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Norican', cursive;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Rubik', sans-serif;
+    /* 
+    font-family: 'Bungee Spice', cursive;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Monoton', cursive;
+    font-family: 'Norican', cursive;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Rubik', sans-serif;
+    
+    
+    */
+
 }
-a{
+
+a {
     text-decoration: none;
     color: inherit;
 }
-.container{
-    width: 70%;
-    border: 1px solid;
+
+.outer-container {
+    width: 100vw;
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: #040120;
+    color: white;
 }
-.hero{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+
+.container {
+    width: 70%;
+    /* border: 1px solid; */
+    padding: 6rem 0;
+
+
+}
+
+.hero {
+    /* display: grid;
+    grid-template-columns: 1fr 2fr; */
+    display: flex;
+    gap: 4rem;
+    position: relative;
+    padding-right: 4rem;
+
+}
+
+.img-section {
+    background: orange;
+    height: 18rem;
+    width: 18rem;
+}
+
+.img-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: blur(.3);
+    background: #585858;
+    translate: 1.2rem -1.2rem;
+
+}
+
+.profile-img {
+    border-radius: 1rem;
+}
+
+.icon {
+    font-size: 3rem;
+    color: orange;
+    align-self: center;
+}
+
+.main_button {
+    display: block;
+    padding-left: 1rem;
+    width: fit-content;
+    border: 1px solid orange;
+    border-radius: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.icon-sm {
+    font-size: 2rem;
+    color: white;
+    border-radius: 50%;
+    background: orange;
+    padding: .4rem;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.main_title {
+    color: var(--text-accent);
+    font-family: 'Bungee Spice', cursive;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(orange, rgb(255, 6, 47));
+    font-size: 2.4rem;
+    align-items: center;
+    text-align: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.main_title:hover {
+    background: linear-gradient(rgb(172, 155, 2), rgb(255, 6, 47));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.main_subtitle {
+    text-align: center;
+}
+
+.main_desc {
+    padding: 1rem 0;
+    text-align: center;
+
+}
+
+.slide-icons-section {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-icons-section>a {
+    font-size: 2rem;
+    padding: .3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    margin: .2rem;
+}
+
+/* about section */
+.about-section,
+.skills-section {
+    margin: 3rem 0;
+
+}
+
+.inner-personal {
+    display: flex;
     gap: 2rem;
 }
 
-.img{
-    background: var(--bg-accent);
-    height: 18rem;
-    width: 14rem;
-    transform:skewX(100px);
+.personal-info h3 {
+    padding: 1rem 0;
+
 }
 
-.icon{
-    background: var(--bg-accent);
+.inner-personal p {
+    color: #585858;
+    padding: .3rem 0;
+}
+
+.inner-personal span {
     color: white;
-    width: 4rem;
-    height: 2rem;
-    border-radius: 1rem;
+}
+
+.title-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    border-bottom: 3px solid #585858;
+    width: fit-content;
     padding: .3rem;
 }
-.main{
-    max-width: 22rem;
+.lang-section{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    justify-content: space-between;
+    padding: 2rem 0;
 }
-.main_button{
-    display: inline-block;
-    padding: .6rem 1rem;
-    border: 1px solid rgb(255, 218, 11);
-    border-radius: 1rem;
-}
-.main_title{
-    color: var(--text-accent);
-    text-align: center;
-}
-.main_subtitle{
-    text-align: center;
-}
-.main_desc{
-    padding: 1rem 0;
-    text-align: center;    
 
+.lang-section div{
+    padding: 1rem 0;
+}
+
+.lang-section  progress{
+    display: block;
+    padding: .3rem;
+}
+
+.lang-section iconify-icon {
+    padding-right: 1rem;
+    font-size: 1.3rem;
+}
+.projects{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+.project iframe{
+    min-width: 20rem;
+    width: 100%;
+    min-height: 20rem;
+    height: 30rem;
+}
+.project-title{
+    padding: 1rem;
+    padding-bottom: 0;
+
+}
+.project-desc{
+    padding: 1rem;
+}
+.project-desc a{
+    color: green;
 }
