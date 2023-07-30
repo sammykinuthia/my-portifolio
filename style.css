@@ -39,6 +39,9 @@ body {
     
     
     */
+    width: 100vw;
+    min-height: 100dvh;
+    overflow-x: hidden;
 
 }
 
@@ -48,8 +51,7 @@ a {
 }
 
 .outer-container {
-    width: 100vw;
-    min-height: 100dvh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -194,8 +196,11 @@ a {
 }
 
 .inner-personal {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .personal-info h3 {
@@ -239,6 +244,11 @@ a {
     display: block;
     padding: .3rem;
 }
+.lang-section div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .lang-section iconify-icon {
     padding-right: 1rem;
@@ -251,6 +261,7 @@ a {
     margin: 2rem 0;
 }
 .project iframe{
+    background: white;
     min-width: 20rem;
     width: 100%;
     min-height: 20rem;
@@ -266,4 +277,66 @@ a {
 }
 .project-desc a{
     color: green;
+}
+.text-sm{
+    font-size: x-small;
+}
+.text-muted{
+    color: #585858;
+}
+.icon-link{
+    padding: 0 .6rem;
+}
+.icon-link:hover{
+    color: white;
+    background: #000;
+}
+footer{
+    padding: 1rem 0;
+}
+footer > *{
+    text-align: center;
+}
+/* media queries */
+
+@media screen and (max-width:1024px) {
+    .container{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .hero{
+    flex-wrap: wrap;
+    justify-content: center;        
+    }
+    .hero .main{
+        order: -1;
+    }
+    .hero .img-section{
+        justify-self: center;
+        align-self: center;
+    }
+
+    /* about section */
+    .inner-personal{
+        grid-template-columns: 1fr;
+
+
+    }
+/* skills section */
+    .skills-section .lang-section{
+    grid-template-columns: repeat(2,1fr);
+  
+    }
+    .skills-section .lang-section div{
+    padding: .6rem 0;
+
+    }
+
+    /* projects section */
+    .projects-section .projects{
+        grid-template-columns: 1fr;
+    }
+   
 }
