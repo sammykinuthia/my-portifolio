@@ -1,96 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Josefin+Sans:wght@400;700&family=Kumbh+Sans:wght@400;700&family=Norican&family=Outfit:wght@400;700&family=Pacifico&family=Rubik:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Inter:wght@400;700;800&family=Josefin+Sans:wght@400;700&family=Kumbh+Sans:wght@400;700&family=Monoton&family=Norican&family=Outfit:wght@400;700&family=Pacifico&family=Rubik:wght@300;400;700&display=swap');
-
-:root {
-    --text-primary: white;
-    --text-accent: rgb(255, 218, 11);
-    --bg-primary: black;
-    --bg-accent: orange;
-
-}
-
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
+    background: #040120;
+    color: white;
 
-    font-family: 'Inter', sans-serif;
-    font-family: 'Josefin Sans', sans-serif;
-    font-family: 'Kumbh Sans', sans-serif;
-    font-family: 'Norican', cursive;
-    font-family: 'Outfit', sans-serif;
-    font-family: 'Pacifico', cursive;
-    font-family: 'Rubik', sans-serif;
-    /* 
-    font-family: 'Bungee Spice', cursive;
-    font-family: 'Inter', sans-serif;
-    font-family: 'Josefin Sans', sans-serif;
-    font-family: 'Kumbh Sans', sans-serif;
-    font-family: 'Monoton', cursive;
-    font-family: 'Norican', cursive;
-    font-family: 'Outfit', sans-serif;
-    font-family: 'Pacifico', cursive;
-    font-family: 'Rubik', sans-serif;
-    
-    
-    */
-    width: 100vw;
-    min-height: 100dvh;
-    overflow-x: hidden;
-
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
 }
 
 .outer-container {
     width: 100%;
+    height: fit-content;
     display: flex;
     justify-content: center;
     align-content: center;
-    background: #040120;
-    color: white;
-}
-
-.container {
-    width: 70%;
-    /* border: 1px solid; */
-    padding: 6rem 0;
-
-
 }
 
 .hero {
-    /* display: grid;
-    grid-template-columns: 1fr 2fr; */
     display: flex;
     gap: 4rem;
     position: relative;
-    /* padding-right: 4rem; */
-
+    align-items: center;
 }
 
-.img-section {
-    background: orange;
-    height: 18rem;
-    width: 18rem;
-}
 
 .img-section img {
     width: 100%;
     height: 100%;
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+
     object-fit: cover;
     object-position: center;
     filter: blur(.3);
+    /* background: #040120 ; */
     background: #585858;
-    translate: 1.2rem -1.2rem;
+    box-shadow: 1px 1px 14px 4px orange;
+    padding: .4rem;
+    border: 2px solid #040120;
 
 }
 
@@ -99,7 +43,6 @@ a {
 }
 
 .icon {
-    font-size: 3rem;
     color: orange;
     align-self: center;
 }
@@ -118,7 +61,6 @@ a {
 }
 
 .icon-sm {
-    font-size: 2rem;
     color: white;
     border-radius: 50%;
     background: orange;
@@ -140,7 +82,6 @@ a {
     display: flex;
     justify-content: center;
     background: linear-gradient(orange, rgb(255, 6, 47));
-    font-size: 2.4rem;
     align-items: center;
     text-align: center;
     background-clip: text;
@@ -168,25 +109,9 @@ a {
 
 }
 
-.slide-icons-section {
-    position: fixed;
-    top: 2rem;
-    right: 10%;
-    display: flex;
-    flex-direction: column;
-}
 
-.slide-icons-section>a {
-    font-size: 2rem;
-    padding: .3rem;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 3rem;
-    height: 3rem;
-    margin: .2rem;
-}
+
+
 
 /* about section */
 .about-section,
@@ -201,6 +126,18 @@ a {
     gap: 2rem;
     justify-content: center;
     align-items: center;
+}
+
+.inner-personal>div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+h3 {
+    padding: 1rem 0;
 }
 
 .personal-info h3 {
@@ -241,6 +178,10 @@ a {
     padding: 1rem 0;
 }
 
+.lang-section label {
+    font-size: .8rem;
+}
+
 .lang-section progress {
     display: block;
     padding: .3rem;
@@ -254,7 +195,6 @@ a {
 
 .lang-section iconify-icon {
     padding-right: 1rem;
-    font-size: 1.3rem;
 }
 
 .projects {
@@ -271,7 +211,7 @@ a {
     justify-content: space-between;
     border-radius: 1rem;
     overflow: hidden;
-    padding: 2rem;
+    padding: 1rem;
     box-shadow: 0 0 10px -3px;
 }
 
@@ -280,7 +220,7 @@ a {
     min-width: 20rem;
     width: 100%;
     min-height: 20rem;
-    height: 30rem;
+    /* height: 30rem; */
 }
 
 .project-title {
@@ -297,13 +237,6 @@ a {
     color: green;
 }
 
-.text-sm {
-    font-size: x-small;
-}
-
-.text-muted {
-    color: #585858;
-}
 
 .icon-link {
     padding: 0 .6rem;
@@ -316,11 +249,23 @@ a {
 
 footer {
     padding: 1rem 0;
+    margin-top: 2rem;
 }
 
 footer>* {
     text-align: center;
 }
+.icons-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
+    margin: 1rem;
+
+
+}
+
+
 
 /* media queries */
 @media screen and (max-width:1600px) {
@@ -359,8 +304,9 @@ footer>* {
     }
 
     .container {
-        padding: 1rem 0 ;
+        padding: 1rem 0;
     }
+
 
     /* about section */
     .inner-personal {
@@ -392,15 +338,10 @@ footer>* {
         height: 20rem;
     }
 
-    .slide-icons-section {
-        right: 2%;
-    }
+
 }
 
 @media screen and (max-width:556px) {
-    .slide-icons-section a {
-        font-size: 1.2rem;
-    }
 
     /* skills section */
     .skills-section .lang-section {
@@ -408,7 +349,18 @@ footer>* {
 
     }
 
-    .slide-icons-section {
-        right: 1%;
+    .lang-section>div {
+        width: 90%;
+        padding: 0 2rem;
+    }
+
+    .lang-section label,
+    .lang-section progress {
+        width: 100%;
+    }
+
+
+    .main_button {
+        margin: .3rem;
     }
 }
